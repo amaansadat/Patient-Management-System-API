@@ -1,10 +1,11 @@
-from fastapi import FastAPI, Path,HTTPException,Query
+from fastapi import FastAPI,Path,HTTPException,Query
 import json 
 
 app = FastAPI()
 
-def load_data():
-    # This function can be used to load data from a database or a file
+
+def load_data():       
+    
     with open('patients.json','r') as f:
         data=json.load(f)
         return data
