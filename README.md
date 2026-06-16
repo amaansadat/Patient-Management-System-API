@@ -49,7 +49,7 @@ A RESTful API built using FastAPI for managing patient records. The API supports
 ## Installation
 
 ```bash
-git clone <repository-url>
+git clone https://github.com/amaansadat/Patient-Management-System-API.git
 cd Patient-Management-API
 ```
 
@@ -79,6 +79,8 @@ uvicorn main:app --reload
 
 ## API Documentation
 
+After starting the server,open your browser and visit:
+
 Swagger UI:
 
 http://127.0.0.1:8000/docs
@@ -86,6 +88,12 @@ http://127.0.0.1:8000/docs
 ReDoc:
 
 http://127.0.0.1:8000/redoc
+
+Note: These URLs work only when the FastAPI server is running on your machine. Before opening them, clone the project, install the required dependencies, and start the server using:
+
+uvicorn main:app --reload
+
+If the server is not running, you will see errors such as "This site can't be reached" or "ERR_CONNECTION_REFUSED".
 
 ## Learning Outcomes
 
