@@ -7,7 +7,9 @@ import json
 app = FastAPI()
 
 class Patient(BaseModel):
-
+    
+    
+    id: Annotated[str,Field(...,description='Unique ID of the patient',example='P001')]
     name: Annotated[str,Field(...,description='Name of the patient',example='Amaan Sadat')]
     city: Annotated[str,Field(...,description='City of residence',example='Lucknow')]
     gender: Annotated[Literal['male','female','other'],Field(...,description='Gender of the patient',example='male')]
@@ -52,7 +54,7 @@ def load_data():
      
 def save_data(data):
     with open('patients.json', 'w') as f:
-        json.dump(data, f)
+        json.dump(data, f, indented=4)
 
 @app.get("/")
 def hello():
